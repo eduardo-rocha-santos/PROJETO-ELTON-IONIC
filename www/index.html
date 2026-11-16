@@ -8,17 +8,14 @@
     />
     <title>Portal do Aluno UCSal | Ionic + AngularJS</title>
 
-    <!-- Ionic Framework v1 CSS (inclui Ionicons) via CDN oficial -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/ionic-sdk@1.3.5/release/css/ionic.min.css"
-    />
+    <!-- Ionic Framework v1 CSS (local + fallback CDN) -->
+    <link rel="stylesheet" href="lib/ionic/css/ionic.min.css" />
 
     <!-- Identidade Visual Institucional UCSal -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Ionic Bundle (inclui Ionic v1 + AngularJS + angular-ui-router + ngAnimate + ngSanitize) -->
-    <script src="https://cdn.jsdelivr.net/npm/ionic-sdk@1.3.5/release/js/ionic.bundle.min.js"></script>
+    <!-- Ionic Bundle v1 (AngularJS + UI-Router + ngAnimate + ngSanitize) -->
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
 
     <!-- Módulo Principal e Roteamento ($stateProvider) -->
     <script src="js/app.js"></script>
