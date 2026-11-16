@@ -1,0 +1,51 @@
+<ion-view view-title="Detalhes da Publicação">
+  <ion-content class="ucsal-bg">
+    <div class="ucsal-content-container">
+      <div class="list card card-ucsal" ng-if="publicacao">
+        <img
+          class="card-banner-img"
+          style="max-height: 230px"
+          ng-src="{{ publicacao.imagem }}"
+          alt="{{ publicacao.titulo }}"
+        />
+
+        <div class="item item-body">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 10px;
+            "
+          >
+            <span
+              class="categoria-badge"
+              ng-class="publicacao.categoria === 'Evento' ? 'categoria-evento' : 'categoria-noticia'"
+            >
+              {{ publicacao.categoria }}
+            </span>
+            <span style="font-size: 12px; color: #64748b">
+              {{ publicacao.data }} • {{ publicacao.campus }}
+            </span>
+          </div>
+
+          <h2 style="margin-top: 0; font-size: 19px; font-weight: 800; color: #002b5c">
+            {{ publicacao.titulo }}
+          </h2>
+
+          <p style="font-size: 14px; line-height: 1.65; color: #334155">
+            {{ publicacao.conteudoCompleto }}
+          </p>
+
+          <a
+            href="#/app/noticias"
+            class="button button-block button-ucsal-outline"
+            style="margin-top: 16px"
+          >
+            <i class="icon ion-arrow-left-c"></i> Voltar para o Mural
+          </a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

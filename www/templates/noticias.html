@@ -1,0 +1,102 @@
+<ion-view view-title="Mural UCSal">
+  <ion-content class="ucsal-bg">
+    <div class="ucsal-content-container">
+      <!-- Saudação e Atalhos Rápidos -->
+      <div class="card card-ucsal" style="padding: 14px 16px">
+        <h2 style="margin: 0; font-size: 17px; font-weight: 700; color: #002b5c">
+          Olá, {{ aluno.nome }}!
+        </h2>
+        <p style="margin: 4px 0 0; font-size: 13px; color: #475569">
+          Curso: <strong>{{ aluno.curso }}</strong> • Matrícula:
+          <strong>{{ aluno.matricula }}</strong>
+        </p>
+      </div>
+
+      <!-- Barra de Filtro por Categoria utilizando filtro nativo do AngularJS (filter) -->
+      <div class="filtro-bar">
+        <button
+          type="button"
+          class="filtro-chip"
+          ng-class="{ ativo: filtroCategoria === '' }"
+          ng-click="selecionarCategoria('')"
+        >
+          Todas
+        </button>
+        <button
+          type="button"
+          class="filtro-chip"
+          ng-class="{ ativo: filtroCategoria === 'Notícia' }"
+          ng-click="selecionarCategoria('Notícia')"
+        >
+          Notícias Institucionais
+        </button>
+        <button
+          type="button"
+          class="filtro-chip"
+          ng-class="{ ativo: filtroCategoria === 'Evento' }"
+          ng-click="selecionarCategoria('Evento')"
+        >
+          Atividades e Eventos
+        </button>
+      </div>
+
+      <!-- Cards de Notícias e Eventos (ng-repeat + filter) -->
+      <div
+        class="list card card-ucsal"
+        ng-repeat="item in publicacoes | filter:{ categoria: filtroCategoria } track by item.id"
+      >
+        <div class="item item-body" style="padding: 0">
+          <img
+            class="card-banner-img"
+            ng-src="{{ item.imagem }}"
+            alt="{{ item.titulo }}"
+          />
+
+          <div style="padding: 14px 16px">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 8px;
+              "
+            >
+              <span
+                class="categoria-badge"
+                ng-class="item.categoria === 'Evento' ? 'categoria-evento' : 'categoria-noticia'"
+              >
+                {{ item.categoria }}
+              </span>
+              <span style="font-size: 12px; color: #64748b">
+                <i class="icon ion-calendar"></i> {{ item.data }} • {{ item.campus }}
+              </span>
+            </div>
+
+            <h3
+              style="
+                margin: 0 0 8px;
+                font-size: 16px;
+                font-weight: 700;
+                color: #0f172a;
+              "
+            >
+              {{ item.titulo }}
+            </h3>
+
+            <p style="margin: 0 0 12px; font-size: 13.5px; color: #475569">
+              {{ item.resumo }}
+            </p>
+
+            <button
+              type="button"
+              class="button button-small button-ucsal"
+              ng-click="abrirDetalhe(item.id)"
+            >
+              Ler mais <i class="icon ion-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
