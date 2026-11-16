@@ -1,0 +1,121 @@
+<ion-view view-title="Consulta Financeira">
+  <ion-content class="ucsal-bg">
+    <div class="ucsal-content-container">
+      <!-- Seletor de Semestre Letivo (ng-model + ng-change) -->
+      <div class="list card card-ucsal">
+        <label class="item item-input item-select">
+          <div class="input-label" style="font-weight: 700; color: #002b5c">
+            Semestre Letivo
+          </div>
+          <select
+            ng-model="filtro.semestre"
+            ng-options="sem for sem in semestres"
+            ng-change="carregarMensalidades()"
+          ></select>
+        </label>
+      </div>
+
+      <!-- Filtro rápido de Status utilizando filtro nativo (filter) -->
+      <div class="filtro-bar">
+        <button
+          type="button"
+          class="filtro-chip"
+          ng-class="{ ativo: filtro.status === '' }"
+          ng-click="filtro.status = ''"
+        >
+          Todas
+        </button>
+        <button
+          type="button"
+          class="filtro-chip"
+          ng-class="{ ativo: filtro.status === 'Paga' }"
+          ng-click="filtro.status = 'Paga'"
+        >
+          Pagas
+        </button>
+        <button
+          type="button"
+          class="filtro-chip"
+          ng-class="{ ativo: filtro.status === 'A Pagar' }"
+          ng-click="filtro.status = 'A Pagar'"
+        >
+          A Pagar
+        </button>
+      </div>
+
+      <!-- Lista de Mensalidades do Semestre Selecionado (ng-repeat + currency + filter) -->
+      <div
+        class="list card card-ucsal"
+        ng-repeat="parcela in mensalidades | filter:{ status: filtro.status } track by parcela.id"
+      >
+        <div class="item item-body">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 10px;
+            "
+          >
+            <div>
+              <h3
+                style="
+                  margin: 0;
+                  font-size: 16px;
+                  font-weight: 700;
+                  color: #002b5c;
+                "
+              >
+                {{ parcela.mesReferencia }}
+              </h3>
+              <p style="margin: 4px 0 0; font-size: 13px; color: #64748b">
+                Vencimento: <strong>{{ parcela.vencimento }}</strong>
+              </p>
+            </div>
+
+            <!-- Badge condicional (ng-class): Paga (Verde) vs A Pagar (Amarelo/Laranja) -->
+            <span
+              class="status-badge"
+              ng-class="parcela.status === 'Paga' ? 'status-paga' : 'status-a-pagar'"
+            >
+              {{ parcela.status }}
+            </span>
+          </div>
+
+          <div
+            style="
+              margin-top: 12px;
+              padding-top: 10px;
+              border-top: 1px solid #e2e8f0;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <span style="font-size: 13px; color: #475569">Valor da Parcela:</span>
+            <!-- Formatação monetária com filtro nativo currency -->
+            <strong style="font-size: 16px; color: #0f172a">
+              {{ parcela.valor | currency:'R$ ' }}
+            </strong>
+          </div>
+
+          <!-- Exibido apenas para mensalidades A Pagar (ng-if) -->
+          <div ng-if="parcela.status === 'A Pagar'" style="margin-top: 10px">
+            <div class="codigo-barras-box">
+              {{ parcela.codigoBarras }}
+            </div>
+
+            <button
+              type="button"
+              class="button button-block button-small button-ucsal"
+              style="margin-top: 10px"
+              ng-click="copiarCodigoBarras(parcela)"
+            >
+              <i class="icon ion-ios-copy-outline"></i> Copiar Código de Barras
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
