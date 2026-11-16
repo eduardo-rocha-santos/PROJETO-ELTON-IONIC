@@ -1,0 +1,62 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <!-- Conteúdo Principal das Telas -->
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-ucsal">
+      <ion-nav-back-button class="button-clear">
+        <i class="icon ion-ios-arrow-back"></i> Voltar
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button
+          class="button button-icon button-clear ion-navicon"
+          menu-toggle="left"
+          aria-label="Abrir menu lateral"
+        ></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <!-- Menu Lateral Esquerdo -->
+  <ion-side-menu side="left">
+    <ion-content>
+      <div class="menu-header-ucsal">
+        <img
+          src="img/logo-ucsal.svg"
+          alt="Brasão UCSal"
+          style="width: 46px; height: 46px; border-radius: 12px"
+        />
+        <h3>{{ obterAluno().nome }}</h3>
+        <p>Matrícula: {{ obterAluno().matricula }} • {{ obterAluno().curso }}</p>
+      </div>
+
+      <ion-list>
+        <ion-item menu-close href="#/app/noticias" class="item-icon-left">
+          <i class="icon ion-ios-paper-outline" style="color: #002b5c"></i>
+          Mural de Notícias e Eventos
+        </ion-item>
+
+        <ion-item menu-close href="#/app/perfil" class="item-icon-left">
+          <i class="icon ion-ios-person-outline" style="color: #002b5c"></i>
+          Atualização Cadastral
+        </ion-item>
+
+        <ion-item menu-close href="#/app/financeiro" class="item-icon-left">
+          <i class="icon ion-cash" style="color: #002b5c"></i>
+          Consulta Financeira
+        </ion-item>
+
+        <ion-item
+          menu-close
+          ng-click="sair()"
+          class="item-icon-left"
+          style="color: #b91c1c"
+        >
+          <i class="icon ion-log-out"></i>
+          Sair do Portal
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

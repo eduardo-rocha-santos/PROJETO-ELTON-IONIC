@@ -1,0 +1,66 @@
+<ion-view view-title="Portal do Aluno UCSal" hide-nav-bar="true">
+  <ion-content class="ucsal-bg padding">
+    <div class="login-wrapper">
+      <div class="login-brand">
+        <img
+          src="img/logo-ucsal.svg"
+          alt="Logo Portal do Aluno UCSal"
+          class="login-logo"
+        />
+        <h1 class="login-title">Portal do Aluno UCSal</h1>
+        <p class="login-subtitle">
+          Autoatendimento Acadêmico • Campi Pituaçu e Federação
+        </p>
+      </div>
+
+      <div class="list card" style="border-radius: 12px; padding: 8px 4px">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Matrícula</span>
+          <input
+            type="text"
+            placeholder="Ex.: 20261001"
+            ng-model="credenciais.matricula"
+          />
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Senha de Acesso</span>
+          <input
+            type="password"
+            placeholder="Digite sua senha"
+            ng-model="credenciais.senha"
+          />
+        </label>
+
+        <div class="padding">
+          <!-- Exibição condicional de erro (ng-if) -->
+          <div class="alerta-erro" ng-if="erroLogin">
+            <i class="icon ion-alert-circled"></i> {{ erroLogin }}
+          </div>
+
+          <button
+            type="button"
+            class="button button-block button-ucsal"
+            ng-click="realizarLogin()"
+          >
+            <i class="icon ion-log-in"></i> Entrar no Portal
+          </button>
+
+          <button
+            type="button"
+            class="button button-block button-ucsal-outline button-small"
+            ng-click="preencherCredenciaisDemo()"
+          >
+            Preencher Credenciais de Teste (20261001)
+          </button>
+        </div>
+      </div>
+
+      <div class="credenciais-dica">
+        <strong>Acesso de Demonstração (Mock AuthService):</strong><br />
+        • Aluno: <strong>Eduardo Rocha Santos</strong><br />
+        • Matrícula: <code>20261001</code> | Senha: <code>123456</code>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
