@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Brasão estilizado Portal UCSal">
+  <defs>
+    <linearGradient id="ucsalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002b5c"/>
+      <stop offset="100%" stop-color="#0077c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#ucsalGrad)"/>
+  <path d="M32 34 H88 V66 C88 84 60 94 60 94 C60 94 32 84 32 66 Z" fill="#ffffff" fill-opacity="0.14" stroke="#ffffff" stroke-width="3"/>
+  <text x="60" y="67" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="800" text-anchor="middle">UCSal</text>
+</svg>

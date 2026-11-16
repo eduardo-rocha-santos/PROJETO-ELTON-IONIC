@@ -1,0 +1,29 @@
+{
+  "name": "Portal do Aluno UCSal - Ionic + AngularJS",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [5500, 8100],
+  "portsAttributes": {
+    "5500": {
+      "label": "Portal do Aluno UCSal (Live Server)",
+      "onAutoForward": "openBrowser"
+    },
+    "8100": {
+      "label": "Portal do Aluno UCSal (Ionic Port)",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "MS-CEINTL.vscode-language-pack-pt-br",
+        "ritwickdey.LiveServer"
+      ],
+      "settings": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "liveServer.settings.port": 5500,
+        "liveServer.settings.root": "/www"
+      }
+    }
+  }
+}

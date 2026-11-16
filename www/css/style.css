@@ -1,0 +1,233 @@
+:root {
+  /* Cores Institucionais da UCSal (Requisito Não-Funcional 4.4) */
+  --ucsal-azul-marinho: #002b5c;
+  --ucsal-azul-claro: #0077c8;
+  --ucsal-azul-suave: #e6f3fc;
+  --ucsal-branco: #ffffff;
+  --ucsal-cinza-fundo: #f4f7fb;
+  --ucsal-texto-escuro: #0f172a;
+  --ucsal-verde-pago: #16a34a;
+  --ucsal-verde-fundo: #dcfce7;
+  --ucsal-laranja-aberto: #d97706;
+  --ucsal-laranja-fundo: #fef3c7;
+}
+
+/* Barra superior institucional UCSal */
+.bar.bar-ucsal {
+  background-color: var(--ucsal-azul-marinho) !important;
+  border-color: var(--ucsal-azul-marinho) !important;
+  background-image: linear-gradient(90deg, var(--ucsal-azul-marinho), var(--ucsal-azul-claro)) !important;
+  color: var(--ucsal-branco) !important;
+}
+
+.bar.bar-ucsal .title,
+.bar.bar-ucsal .button {
+  color: var(--ucsal-branco) !important;
+}
+
+/* Fundo geral das views Ionic */
+.ucsal-bg {
+  background-color: var(--ucsal-cinza-fundo);
+}
+
+.ucsal-content-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding-bottom: 24px;
+}
+
+/* Botões Institucionais UCSal */
+.button.button-ucsal {
+  background-color: var(--ucsal-azul-marinho);
+  border-color: var(--ucsal-azul-marinho);
+  color: var(--ucsal-branco);
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.button.button-ucsal:hover,
+.button.button-ucsal:active {
+  background-color: var(--ucsal-azul-claro);
+  border-color: var(--ucsal-azul-claro);
+  color: var(--ucsal-branco);
+}
+
+.button.button-ucsal-outline {
+  background-color: transparent;
+  border: 1px solid var(--ucsal-azul-claro);
+  color: var(--ucsal-azul-claro);
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Tela de Login (RF01) */
+.login-wrapper {
+  max-width: 420px;
+  margin: 20px auto;
+  padding: 0 14px;
+}
+
+.login-brand {
+  text-align: center;
+  padding: 20px 10px 12px;
+}
+
+.login-logo {
+  width: 78px;
+  height: 78px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 43, 92, 0.22);
+}
+
+.login-title {
+  color: var(--ucsal-azul-marinho);
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.login-subtitle {
+  color: #475569;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.credenciais-dica {
+  background-color: var(--ucsal-azul-suave);
+  border-left: 4px solid var(--ucsal-azul-claro);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--ucsal-azul-marinho);
+}
+
+.alerta-erro {
+  background-color: #fee2e2;
+  border-left: 4px solid #dc2626;
+  color: #991b1b;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Menu Lateral (Side Menu) */
+.menu-header-ucsal {
+  background: linear-gradient(135deg, var(--ucsal-azul-marinho), var(--ucsal-azul-claro));
+  color: var(--ucsal-branco);
+  padding: 22px 16px 18px;
+}
+
+.menu-header-ucsal h3 {
+  color: var(--ucsal-branco);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 8px 0 2px;
+}
+
+.menu-header-ucsal p {
+  color: #dbeafe;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Cards do Mural de Notícias e Eventos (RF02) */
+.card-ucsal {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 43, 92, 0.08);
+  margin: 14px 12px;
+}
+
+.card-banner-img {
+  width: 100%;
+  max-height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.categoria-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.categoria-noticia {
+  background-color: var(--ucsal-azul-suave);
+  color: var(--ucsal-azul-marinho);
+}
+
+.categoria-evento {
+  background-color: #dbeafe;
+  color: var(--ucsal-azul-claro);
+}
+
+.filtro-bar {
+  display: flex;
+  gap: 8px;
+  padding: 12px 12px 0;
+  flex-wrap: wrap;
+}
+
+.filtro-chip {
+  border: 1px solid #cbd5e1;
+  background-color: var(--ucsal-branco);
+  color: #334155;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.filtro-chip.ativo {
+  background-color: var(--ucsal-azul-marinho);
+  border-color: var(--ucsal-azul-marinho);
+  color: var(--ucsal-branco);
+}
+
+/* Campos Somente Leitura no Perfil (RF03) */
+.input-bloqueado input[disabled] {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+/* Status Financeiro (RF04): Paga (Verde) e A Pagar (Amarelo/Laranja) */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-paga {
+  background-color: var(--ucsal-verde-fundo);
+  color: var(--ucsal-verde-pago);
+  border: 1px solid #86efac;
+}
+
+.status-a-pagar {
+  background-color: var(--ucsal-laranja-fundo);
+  color: var(--ucsal-laranja-aberto);
+  border: 1px solid #fcd34d;
+}
+
+.codigo-barras-box {
+  background-color: #f8fafc;
+  border: 1px dashed #94a3b8;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-top: 8px;
+  font-family: monospace;
+  font-size: 11px;
+  color: #334155;
+  word-break: break-all;
+}

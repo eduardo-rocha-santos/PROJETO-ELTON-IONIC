@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" role="img" aria-label="Ilustração Semana de Mobilização Científica SEMOC UCSal">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003875"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="280" fill="url(#g2)"/>
+  <circle cx="300" cy="122" r="56" fill="#ffffff" fill-opacity="0.15" stroke="#7dd3fc" stroke-width="2"/>
+  <text x="300" y="130" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="800" text-anchor="middle">SEMOC</text>
+  <text x="300" y="220" fill="#e0f2fe" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">CAMPUS PITUAÇU • PESQUISA &amp; INOVAÇÃO</text>
+</svg>

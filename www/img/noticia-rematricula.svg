@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" role="img" aria-label="Ilustração Calendário de Rematrícula UCSal">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002b5c"/>
+      <stop offset="100%" stop-color="#0077c8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="280" fill="url(#g1)"/>
+  <rect x="190" y="48" width="220" height="184" rx="16" fill="#ffffff" fill-opacity="0.16" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="215" y="82" width="170" height="20" rx="6" fill="#ffffff" fill-opacity="0.85"/>
+  <rect x="215" y="118" width="130" height="14" rx="5" fill="#bae6fd" fill-opacity="0.7"/>
+  <rect x="215" y="146" width="150" height="14" rx="5" fill="#bae6fd" fill-opacity="0.7"/>
+  <text x="300" y="210" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">REMATRÍCULA 2026.2</text>
+</svg>

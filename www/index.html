@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"
+    />
+    <title>Portal do Aluno UCSal | Ionic + AngularJS</title>
+
+    <!-- Ionic Framework v1 CSS (inclui Ionicons) via CDN oficial -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ionic-sdk@1.3.5/release/css/ionic.min.css"
+    />
+
+    <!-- Identidade Visual Institucional UCSal -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Ionic Bundle (inclui Ionic v1 + AngularJS + angular-ui-router + ngAnimate + ngSanitize) -->
+    <script src="https://cdn.jsdelivr.net/npm/ionic-sdk@1.3.5/release/js/ionic.bundle.min.js"></script>
+
+    <!-- Módulo Principal e Roteamento ($stateProvider) -->
+    <script src="js/app.js"></script>
+
+    <!-- Camada de Dados Mockados (Services / Factories) -->
+    <script src="js/services/AuthService.js"></script>
+    <script src="js/services/AlunoService.js"></script>
+    <script src="js/services/NoticiasService.js"></script>
+    <script src="js/services/FinanceiroService.js"></script>
+
+    <!-- Controllers das Views -->
+    <script src="js/controllers/LoginCtrl.js"></script>
+    <script src="js/controllers/NoticiasCtrl.js"></script>
+    <script src="js/controllers/PerfilCtrl.js"></script>
+    <script src="js/controllers/FinanceiroCtrl.js"></script>
+  </head>
+  <body ng-app="ucsalApp">
+    <!-- Container de navegação SPA do Ionic -->
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

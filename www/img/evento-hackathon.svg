@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" role="img" aria-label="Ilustração Maratona de Programação UCSal">
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002b5c"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="280" fill="url(#g4)"/>
+  <rect x="180" y="52" width="240" height="176" rx="16" fill="#0f172a" fill-opacity="0.35" stroke="#93c5fd" stroke-width="2"/>
+  <text x="300" y="136" fill="#ffffff" font-family="monospace" font-size="38" font-weight="700" text-anchor="middle">&lt;CODE/&gt;</text>
+  <text x="300" y="196" fill="#dbeafe" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">MARATONA ENGENHARIA DE SOFTWARE</text>
+</svg>
