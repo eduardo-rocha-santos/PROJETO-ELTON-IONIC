@@ -1,0 +1,104 @@
+<ion-view view-title="Atualização Cadastral">
+  <ion-content class="ucsal-bg">
+    <div class="ucsal-content-container">
+      <!-- Dados Institucionais (Somente Leitura com ng-disabled) -->
+      <div class="list card card-ucsal">
+        <div
+          class="item item-divider"
+          style="background-color: #002b5c; color: #ffffff; font-weight: 700"
+        >
+          <i class="icon ion-university"></i> Vínculo Institucional (Somente Leitura)
+        </div>
+
+        <label class="item item-input item-stacked-label input-bloqueado">
+          <span class="input-label">Nome Completo</span>
+          <input type="text" ng-model="cadastro.nome" ng-disabled="true" />
+        </label>
+
+        <label class="item item-input item-stacked-label input-bloqueado">
+          <span class="input-label">Matrícula</span>
+          <input type="text" ng-model="cadastro.matricula" ng-disabled="true" />
+        </label>
+
+        <label class="item item-input item-stacked-label input-bloqueado">
+          <span class="input-label">Curso</span>
+          <input type="text" ng-model="cadastro.curso" ng-disabled="true" />
+        </label>
+      </div>
+
+      <!-- Dados Editáveis pelo Estudante (ng-model) -->
+      <div class="list card card-ucsal">
+        <div
+          class="item item-divider"
+          style="background-color: #e6f3fc; color: #002b5c; font-weight: 700"
+        >
+          <i class="icon ion-edit"></i> Dados de Contato e Endereço (Editáveis)
+        </div>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">E-mail Pessoal</span>
+          <input
+            type="email"
+            placeholder="nome@email.com"
+            ng-model="cadastro.email"
+          />
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Telefone / WhatsApp</span>
+          <input
+            type="tel"
+            placeholder="(71) 99999-0000"
+            ng-model="cadastro.telefone"
+          />
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">CEP</span>
+          <input
+            type="text"
+            placeholder="40000-000"
+            ng-model="cadastro.cep"
+          />
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Rua e Número</span>
+          <input
+            type="text"
+            placeholder="Av. / Rua e número"
+            ng-model="cadastro.rua"
+          />
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Bairro</span>
+          <input
+            type="text"
+            placeholder="Ex.: Pituaçu"
+            ng-model="cadastro.bairro"
+          />
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Cidade / UF</span>
+          <input
+            type="text"
+            placeholder="Ex.: Salvador - BA"
+            ng-model="cadastro.cidade"
+          />
+        </label>
+
+        <div class="padding">
+          <button
+            type="button"
+            class="button button-block button-ucsal"
+            ng-click="salvarAlteracoes()"
+          >
+            <i class="icon ion-checkmark-circled"></i> Salvar Alterações
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
